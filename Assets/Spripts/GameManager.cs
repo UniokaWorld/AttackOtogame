@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
         {
             case 0:
                 Instantiate(notes[0], new Vector3(-2, 0.5f,15), Quaternion.identity);
+                
                 break;
             case 1:
                 Instantiate(notes[1], new Vector3(-1,0.5f,15), Quaternion.identity);
@@ -76,6 +77,12 @@ public class GameManager : MonoBehaviour
                 break;
             case 4:
                 Instantiate(notes[4], new Vector3(2, 0.5f,15), Quaternion.identity);
+                break;
+            case 5://monsuta hidari
+                Instantiate(notes[0], new Vector3(-1, 0.5f, 15), Quaternion.Euler(new Vector3(-80, -90, -140)));
+                break;
+            case 6://monsuta migi
+                Instantiate(notes[0], new Vector3(1, 0.5f, 15), Quaternion.Euler(new Vector3(-80, -90, -140)));
                 break;
 
         }
