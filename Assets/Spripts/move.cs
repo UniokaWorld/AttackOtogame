@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class move : MonoBehaviour
+public class Move : MonoBehaviour
 {
 	bool Now =false;
 
@@ -13,18 +13,18 @@ public class move : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.A))
 			{
 				Vector3 pos = transform.position;
-				if (pos.x >= -2) StartCoroutine(Move("A"));
+				if (pos.x >= -2) StartCoroutine(move("A"));
 			}
 			if (Input.GetKeyDown(KeyCode.D))
 			{
 				Vector3 pos = transform.position;
-				if(pos.x <= 2) StartCoroutine(Move("D"));
+				if(pos.x <= 2) StartCoroutine(move("D"));
 			}
 		}
 		
 	}
 
-	private IEnumerator Move(string key)
+	private IEnumerator move(string key)
 	{
 		Now = true;
 		Vector3 pos = transform.position;
@@ -53,5 +53,9 @@ public class move : MonoBehaviour
 		}
 		transform.position = pos;
 		Now = false;
+	}
+	public void NowBool()
+	{
+		Now = true;
 	}
 }

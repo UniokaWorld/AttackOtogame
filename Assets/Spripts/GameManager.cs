@@ -20,8 +20,11 @@ public class GameManager : MonoBehaviour
     public float timeOffset = -1;
 
     private bool _isPlaying = false;
-    public GameObject startButton;
 
+    bool Yobidasi = false;
+
+    [SerializeField] GameObject move;
+    [SerializeField] GameObject UISystem;
 
     void Start()
     {
@@ -29,20 +32,27 @@ public class GameManager : MonoBehaviour
         _timing = new float[1024];
         _lineNum = new int[1024];
         LoadCSV();
+        Invoke("StartGame", 1f);
     }
 
     void Update()
     {
-        if (_isPlaying)
+        if (_isPlaying && !Yobidasi)
         {
             CheckNextNotes();
+            if (!_audioSource.isPlaying)
+            {
+                Yobidasi = true;
+                move.GetComponent<Move>().NowBool();
+                UISystem.GetComponent<UISystem>().Owata(1);
+            }
         }
+
 
     }
 
     public void StartGame()
     {
-        startButton.SetActive(false);
         _startTime = Time.time;
         _audioSource.Play();
         _isPlaying = true;
@@ -63,26 +73,26 @@ public class GameManager : MonoBehaviour
         switch (num)
         {
             case 0:
-                Instantiate(notes[0], new Vector3(-2, 0.5f,15), Quaternion.identity);
+                Instantiate(notes[0], new Vector3(-2, 0.5f,15.2f), Quaternion.identity);
                 
                 break;
             case 1:
-                Instantiate(notes[1], new Vector3(-1,0.5f,15), Quaternion.identity);
+                Instantiate(notes[1], new Vector3(-1,0.53f,15), Quaternion.identity);
                 break;
             case 2:
-                Instantiate(notes[2], new Vector3(0,0.5f,15), Quaternion.identity);
+                Instantiate(notes[2], new Vector3(0,0.53f,15), Quaternion.identity);
                 break;
             case 3:
-                Instantiate(notes[3], new Vector3(1,0.5f,15), Quaternion.identity);
+                Instantiate(notes[3], new Vector3(1,0.53f,15), Quaternion.identity);
                 break;
             case 4:
-                Instantiate(notes[4], new Vector3(2, 0.5f,15), Quaternion.identity);
+                Instantiate(notes[4], new Vector3(2, 0.53f,15), Quaternion.identity);
                 break;
             case 5://monsuta hidari
-                Instantiate(notes[0], new Vector3(-1, 0.5f, 15), Quaternion.Euler(new Vector3(-80, -90, -140)));
+                Instantiate(notes[5], new Vector3(-1, 0.6f, 15), Quaternion.Euler(new Vector3(-80, -90, -140)));
                 break;
             case 6://monsuta migi
-                Instantiate(notes[0], new Vector3(1, 0.5f, 15), Quaternion.Euler(new Vector3(-80, -90, -140)));
+                Instantiate(notes[6], new Vector3(1, 0.6f, 15), Quaternion.Euler(new Vector3(-80, -90, -140)));
                 break;
 
         }
@@ -115,5 +125,12 @@ public class GameManager : MonoBehaviour
     float GetMusicTime()
     {
         return Time.time - _startTime;
+    }
+
+    public void OUT()
+    {
+        _isPlaying = false;
+        _audioSource.Stop();
+
     }
 }
