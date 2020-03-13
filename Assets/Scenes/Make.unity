@@ -210,7 +210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &133580798
 RectTransform:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5037b74ff0019334da75616a96815632, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cca5c636f77dc5148b7d069b0cd8fd3e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -488,7 +488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &350892472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -996,7 +996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &583423578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,7 +1142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &676576440
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2173,7 +2173,7 @@ MonoBehaviour:
   - {fileID: 2941751279718870479, guid: 45c8a89071adcc342afd83863f7dc161, type: 3}
   - {fileID: 8357385199195251674, guid: 1fcb71a157a74ed43b5920596d191b12, type: 3}
   - {fileID: 8357385199195251674, guid: 1fcb71a157a74ed43b5920596d191b12, type: 3}
-  filePass: CSV/Unity
+  filePass: CSV/Ss
   timeOffset: -1.5
   move: {fileID: 640878074}
   UISystem: {fileID: 1178080942}
@@ -2708,50 +2708,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318760965}
   m_CullTransparentMesh: 0
---- !u!1 &1351958554
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1351958556}
-  - component: {fileID: 1351958555}
-  m_Layer: 0
-  m_Name: sumaho
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1351958555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351958554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de010ddc8fc492f4ca2de8ae7dada612, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOBJ: {fileID: 640878074}
---- !u!4 &1351958556
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351958554}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1376954172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,6 +3361,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Unioka
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569009921478763748, guid: af8a8d889e05c534cbd8901d2229f977,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af8a8d889e05c534cbd8901d2229f977, type: 3}

@@ -23,10 +23,23 @@ public class Move : MonoBehaviour
 		}
 		
 	}
+	public void SuwaipuMove(string muki)
+	{
+		if(muki == "left")
+		{
+			Vector3 pos = transform.position;
+			if (pos.x >= -2) StartCoroutine(move("A"));
+		}
+		if (muki == "right")
+		{
+			Vector3 pos = transform.position;
+			if (pos.x <= 2) StartCoroutine(move("D"));
+		}
+	}
 
 	private IEnumerator move(string key)
 	{
-		Now = true;
+		//Now = true;
 		Vector3 pos = transform.position;
 		if (key == "A")
 		{

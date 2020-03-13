@@ -118,7 +118,7 @@ public class UISystem : MonoBehaviour
     IEnumerator Game()
     {
 
-        var async = SceneManager.LoadSceneAsync("GameScene");
+        var async = SceneManager.LoadSceneAsync("Make");
 
         async.allowSceneActivation = false;
         yield return new WaitForSeconds(1);
